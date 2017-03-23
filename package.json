@@ -1,0 +1,34 @@
+{
+  "name": "webapp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "npm node server",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "WEBPACK_ENV=dev webpack --progress --colors --watch",
+    "watch-css": "nodemon -e scss -x \"npm run build-css\" ",
+    "build-css": "node-sass --include-path scss scss/main.scss   public/css/main.css"
+
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://www.github.com/yasserahennawi/webapp.git"
+  },
+  "keywords": [],
+  "author": "yasserahennawi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://www.github.com/yasserahennawi/webapp/issues"
+  },
+  "devDependencies": {
+    "babel-loader": "^6.4.1",
+    "node-sass": "^4.5.1",
+    "nodemon": "^1.11.0",
+    "sass-loader": "^6.0.3",
+    "webpack": "^2.3.1"
+  },
+  "dependencies": {
+    "style-loader": "^0.16.0"
+  }
+}
